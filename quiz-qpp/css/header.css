@@ -1,0 +1,128 @@
+body,
+html {
+    overflow-x: visible;
+}
+
+.header {
+    max-width: 1230px;
+}
+
+.header__inner {
+    padding: 20px 25px;
+    background-color: #FFFFF0;
+}
+
+.header__title {
+    text-decoration: none;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header__title:hover {
+    color: #8A2BE2;
+}
+
+.header__nav {
+    background-color: #F0FFFF;
+}
+
+.header__lists {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.header__nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header__item {
+    flex: 0 0 calc(93% / 6);
+    height: 60px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    text-decoration: none;
+    color: #00BFFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header__menu:hover {
+    color: #8A2BE2;
+}
+
+.header__item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #000;
+    width: 1px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.header__item:last-of-type::after {
+    content: none;
+}
+
+/* ドロップダウンメニュー */
+
+.header__item ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #F0FFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.2s ease-in-out;
+}
+
+.header__item:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.drop-down {
+    width: 100%;
+    text-align: center;
+    transition: .2s;
+    flex: 0 0 calc(85% / 6);
+}
+
+.drop-down:hover {
+    height: 30px;
+}
+
+.drop-down__menu {
+    display: block;
+    padding: 12px 0px;
+    text-decoration: none;
+    color: #00BFFF;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.drop-down__menu:hover {
+    color: #8A2BE2;
+}

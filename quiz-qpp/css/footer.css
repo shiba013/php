@@ -1,0 +1,15 @@
+.footer {
+    background-color: #000;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.footer__inner {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.footer__logo {
+    color: #fff;
+}
